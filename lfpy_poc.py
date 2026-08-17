@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from neuron import h
 import LFPy
 
+from extracellular import compute_extracellular
 
 # ---------------------------------------------------------
 # CONFIG
@@ -25,6 +26,11 @@ SIGMA = 0.3  # extracellular conductivity S/m
 # Same template location currently used by DL4neurons2
 TEMPLATES_DIR = "/global/cfs/cdirs/m3513/M1_Hoc_template/HocTemplate"
 
+if not os.path.isdir(TEMPLATES_DIR):
+    raise RuntimeError(
+        "BBP template directory not available. "
+        "Run this script in the NERSC/lab environment."
+    )
 
 # ---------------------------------------------------------
 # LOAD CELL INFORMATION
@@ -128,18 +134,13 @@ electrode_x = np.array([20., 50., 100., 200.])
 electrode_y = np.zeros(4)
 electrode_z = np.zeros(4)
 
-electrode = LFPy.RecExtElectrode(
-    cell=cell,
+extracellular = compute_extracellular(
+    cell,
+    electrode_x,
+    electrode_y,
+    electrode_z,
     sigma=SIGMA,
-    x=electrode_x,
-    y=electrode_y,
-    z=electrode_z,
-    method="linesource"
 )
-
-M = electrode.get_transformation_matrix()
-
-extracellular = M @ cell.imem
 
 
 # ---------------------------------------------------------
