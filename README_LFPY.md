@@ -19,13 +19,34 @@ NEURON simulation
 → LFPy extracellular forward model  
 → virtual electrode recordings
 
+## Local BBP Proof of Concept
+
+This branch is tested with NEURON 8.2.7 and LFPy 2.3.5. The legacy BBP
+probabilistic synapse mechanisms do not compile unchanged with NEURON 9.
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -r requirements-lfpy.txt
+
+cd /path/to/L5_TTPC1_cADpyr232_1
+CC=gcc CXX=g++ /path/to/.venv/bin/nrnivmodl mechanisms
+cd /path/to/lfpy-integration
+
+.venv/bin/python lfpy_poc.py /path/to/L5_TTPC1_cADpyr232_1 \
+  --output-dir lfpy_results
+```
+
+Run the Python command from a directory that does not already contain a
+different `x86_64/libnrnmech.so`, because NEURON automatically loads mechanisms
+from the working directory.
+
 ## Proof of Concept
 
 The current proof-of-concept implementation:
 
-1. Loads neuron information from `cells.json`
-2. Loads the existing BBP HOC templates
-3. Creates the neuron model using LFPy
+1. Accepts an unpacked BBP model directory
+2. Detects the HOC template and ASC morphology
+3. Loads the compiled BBP mechanisms and creates the neuron model using LFPy
 4. Applies a current stimulus
 5. Records intracellular membrane voltage
 6. Records transmembrane currents
@@ -66,11 +87,14 @@ This will allow the existing parameter-sampling pipeline to generate both intrac
 
 ## Current Status
 
-Implementation prepared.
+Validated locally with `L5_TTPC1_cADpyr232_1`:
+
+- 3,323 compartments
+- four virtual electrodes at 20, 50, 100, and 200 micrometers from the soma
+- intracellular and extracellular plots generated successfully
+- raw time series saved to NPZ
 
 Pending:
 
-- NERSC account approval
-- validation with the lab's BBP morphology and HOC templates
-- inspection of extracellular traces
-- final integration into the large-scale HDF5 generation pipeline
+- integration into the large-scale HDF5 generation pipeline
+- NERSC/Perlmutter validation and scaling

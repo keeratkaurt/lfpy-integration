@@ -1,4 +1,4 @@
-neuron
-LFPy
+neuron==8.2.7
+LFPy==2.3.5
 numpy
 matplotlib
