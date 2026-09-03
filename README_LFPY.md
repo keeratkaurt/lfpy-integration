@@ -36,6 +36,19 @@ cd /path/to/lfpy-integration
   --output-dir lfpy_results
 ```
 
+To reproduce the test with the DL4neurons2 `InterChaoticB` stimulus:
+
+```bash
+.venv/bin/python lfpy_poc.py /path/to/L5_TTPC1_cADpyr232_1 \
+  --stim-file stims/5k50kInterChaoticB.csv \
+  --output-dir lfpy_results_interchaoticb
+```
+
+The CSV values are interpreted as nA and played into a somatic `IClamp` at the
+simulation timestep. Optional `--stim-multiplier` and `--stim-dc-offset` flags
+support the scaling used by the larger data-generation pipeline; both default
+to an unchanged, reproducible waveform (1.0 and 0.0 nA).
+
 Run the Python command from a directory that does not already contain a
 different `x86_64/libnrnmech.so`, because NEURON automatically loads mechanisms
 from the working directory.
@@ -71,6 +84,8 @@ When run successfully in the NERSC/lab environment, the proof of concept should 
 
 - `intracellular_voltage.png`
 - `extracellular_voltage.png`
+- `stimulus_current.png`
+- `interchaoticb_summary.png`
 - `lfpy_poc_output.npz`
 
 ## Integration Plan
