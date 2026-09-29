@@ -44,6 +44,36 @@ To reproduce the test with the DL4neurons2 `InterChaoticB` stimulus:
   --output-dir lfpy_results_interchaoticb
 ```
 
+### Outside-cell electrode validation
+
+```bash
+.venv/bin/python lfpy_poc.py /path/to/L5_TTPC1_cADpyr232_1 \
+  --stim-file stims/5k50kInterChaoticB.csv \
+  --outside-cell --outside-margin 20 \
+  --output-dir lfpy_results_outside
+```
+
+This run uses the BBP `L5_TTPC1_cADpyr232_1` model (morphology
+`dend-C060114A2_axon-C060114A5.asc`). The placement figure uses the
+anatomical x-y plane. Four point electrodes are 20 µm beyond the x-y
+bounding box, at soma z: left, right, above the apical tuft, and below
+the basal/axonal extent. Coordinates and labels are saved in the NPZ.
+
+The 5,000 CSV samples are applied at **0.1 ms/sample** for this
+500 ms demonstration; this is an explicit choice, not the default
+of the main `run.py` pipeline (0.025 ms). Specify `--dt` to change it.
+The clamp-current recorder is offset by one sample relative to the
+command vector in this LFPy/NEURON combination; the saved NPZ includes both.
+The extracellular plots show the recorded response, including an
+initialization transient at time zero.
+
+Validated with NEURON 8.2.7 and LFPy 2.3.5: 3,323 compartments,
+two somatic zero-crossing action potentials, soma voltage -90.47 to
++39.41 mV. Peak absolute extracellular signal (µV): left 2.75,
+right 2.71, above apical 1.65, below basal 2.00. The run produces
+`outside_cell_electrode_placement.png` and
+`outside_cell_voltage_traces.png` in addition to the common outputs.
+
 The CSV values are interpreted as nA and played into a somatic `IClamp` at the
 simulation timestep. Optional `--stim-multiplier` and `--stim-dc-offset` flags
 support the scaling used by the larger data-generation pipeline; both default
