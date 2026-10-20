@@ -1,0 +1,5 @@
+neuron==8.2.7
+LFPy==2.3.5
+numpy==1.26.4
+scipy==1.14.1
+matplotlib==3.9.4

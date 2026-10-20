@@ -4,6 +4,65 @@
 
 Extend the existing DL4neurons2 NEURON simulation pipeline to generate simulated extracellular electrode recordings.
 
+## Latest validation: extracellular recordings near distinct cell regions
+
+This demonstration applies **one InterChaoticB current clamp at the soma** of
+the supplied BBP L5_TTPC1 model and calculates extracellular voltage at four
+passive point probes near the soma, apical dendrite, basal dendrite, and axon.
+The probes do not inject current. Each probe records the field from all
+transmembrane currents; its region label denotes its location, not an isolated
+contribution from that region.
+
+Install the tested environment, compile the model mechanisms as described
+below, and run from the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-lfpy-sites.txt
+python lfpy_site_recordings.py /path/to/L5_TTPC1_cADpyr232_1 --stim-file stims/5k50kInterChaoticB.csv --dt 0.1 --output-dir results_site_recordings
+python plot_extracellular_sites.py --input results_site_recordings/site_recordings.npz
+```
+
+Replace the model path with the actual unpacked model directory. The two new
+scripts use `build_cell` from `lfpy_poc.py`; keep all three scripts together at
+the repository root. NEURON 8.2.7 is required for the legacy BBP mechanisms.
+
+The 0.1 ms interval, multiplier 1, and offset 0 match the settings in
+`BBP_sbatch_def.sh`, `BBP_sbatch_submit.sh`, and `newBBP_sbatch_submit.sh` for
+InterChaoticB. The 5,000 CSV samples span 500 ms. Do not infer timing from the
+general `run.py` default (0.025 ms).
+
+### Figures and numerical output
+
+- [Probe locations](results_site_recordings/site_electrode_placement.png)
+- [Extracellular voltage only, with spike-interval close-ups](results_site_recordings/extracellular_sites_only.png)
+- [Supporting stimulus, soma voltage, and extracellular panels](results_site_recordings/site_extracellular_recordings.png)
+- [Raw arrays and probe coordinates](results_site_recordings/site_recordings.npz)
+
+Validated on 3,323 compartments with two somatic upward zero-crossings.
+Peak absolute extracellular voltage: perisomatic 87.58 µV, apical 2.77 µV,
+basal 12.39 µV, axonal 12.55 µV. Traces are stored in mV and plotted in µV.
+The conductivity is 0.3 S/m and the forward model uses line sources in an
+infinite homogeneous conductor. The injected-current return electrode is not
+explicitly modeled, and stimulus-correlated field components are retained.
+
+The x-y location map is a projection; probes are displaced in z and can
+overlap drawn branches in that projection. Minimum clearance from modeled
+compartment surfaces is approximately 20–22 µm, estimated from line segments
+and compartment radii. Labels identify probe neighborhoods; the dense
+perisomatic region includes nearby dendrites. The NPZ records both the target
+and nearest compartment indices and exact probe coordinates.
+
+The extracellular-only plot shows 100–500 ms to omit initialization and
+285–305 ms for the close-ups. The unfiltered 0–500 ms data remain in the NPZ.
+In this NEURON/LFPy combination the recorded clamp current is one sample
+behind the command vector; both arrays are retained. No stimulus has been
+applied to dendrites, axon, or virtual recording probes.
+
+This completes a single-cell demonstration. HDF5 integration and NERSC
+scaling remain future work.
+
 ## Existing Pipeline
 
 The current pipeline uses NEURON to simulate detailed neuron models and generate intracellular membrane-voltage responses while varying biophysical parameters.
