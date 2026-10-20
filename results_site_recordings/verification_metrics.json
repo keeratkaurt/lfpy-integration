@@ -1,0 +1,179 @@
+{
+  "input": "results_site_recordings/site_recordings.npz",
+  "soma_zero_crossings_ms": [
+    289.044492993273,
+    298.2265456113499
+  ],
+  "soma_voltage_range_mV": [
+    -90.47433415545679,
+    39.406648821220685
+  ],
+  "dt_ms": 0.1,
+  "sigma_S_per_m": 0.3,
+  "unshifted_command_error_nA": 1.1824158307440684,
+  "one_sample_lag_command_error_nA": 0,
+  "electrodes": [
+    {
+      "region": "Soma",
+      "xyz_um": [
+        0,
+        0,
+        37.07013961248617
+      ],
+      "saved_surface_clearance_um": 20.865527270355415,
+      "target_compartment": 0,
+      "nearest_compartment": 2323,
+      "full_recording": {
+        "peak_abs_uV": 87.58428154416013,
+        "peak_signed_uV": -87.58428154416013,
+        "peak_time_ms": 298.3,
+        "peak_to_peak_uV": 121.86324375497826
+      },
+      "displayed_interval": {
+        "peak_abs_uV": 87.58428154416013,
+        "peak_signed_uV": -87.58428154416013,
+        "peak_time_ms": 298.3,
+        "peak_to_peak_uV": 121.86324375497826
+      },
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV": 84.95107590910422,
+          "peak_signed_uV": -84.95107590910422,
+          "peak_time_ms": 289.2,
+          "peak_to_peak_uV": 109.32834786242178
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV": 87.58428154416013,
+          "peak_signed_uV": -87.58428154416013,
+          "peak_time_ms": 298.3,
+          "peak_to_peak_uV": 113.8788756770813
+        }
+      ]
+    },
+    {
+      "region": "Apical dendrite",
+      "xyz_um": [
+        -29.353239804506302,
+        646.9737224578857,
+        6.804866205770651
+      ],
+      "saved_surface_clearance_um": 21.27653595165298,
+      "target_compartment": 3033,
+      "nearest_compartment": 2974,
+      "full_recording": {
+        "peak_abs_uV": 2.772704670370247,
+        "peak_signed_uV": 2.772704670370247,
+        "peak_time_ms": 375.9,
+        "peak_to_peak_uV": 3.532137465000616
+      },
+      "displayed_interval": {
+        "peak_abs_uV": 2.772704670370247,
+        "peak_signed_uV": 2.772704670370247,
+        "peak_time_ms": 375.9,
+        "peak_to_peak_uV": 3.532137465000616
+      },
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV": 2.0677191163279205,
+          "peak_signed_uV": 2.0677191163279205,
+          "peak_time_ms": 288.5,
+          "peak_to_peak_uV": 2.1393513284168804
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV": 2.6392793475334098,
+          "peak_signed_uV": 2.6392793475334098,
+          "peak_time_ms": 297.6,
+          "peak_to_peak_uV": 3.025584763069427
+        }
+      ]
+    },
+    {
+      "region": "Basal dendrite",
+      "xyz_um": [
+        -39.160706211480814,
+        -140.5234216306063,
+        -54.27815015616672
+      ],
+      "saved_surface_clearance_um": 22.16418402872346,
+      "target_compartment": 2286,
+      "nearest_compartment": 2285,
+      "full_recording": {
+        "peak_abs_uV": 12.391536225441897,
+        "peak_signed_uV": 12.391536225441897,
+        "peak_time_ms": 375.9,
+        "peak_to_peak_uV": 20.176194608748386
+      },
+      "displayed_interval": {
+        "peak_abs_uV": 12.391536225441897,
+        "peak_signed_uV": 12.391536225441897,
+        "peak_time_ms": 375.9,
+        "peak_to_peak_uV": 20.176194608748386
+      },
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV": 8.778268511132145,
+          "peak_signed_uV": 8.778268511132145,
+          "peak_time_ms": 288.5,
+          "peak_to_peak_uV": 14.902725667727818
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV": 12.041079955663141,
+          "peak_signed_uV": 12.041079955663141,
+          "peak_time_ms": 297.7,
+          "peak_to_peak_uV": 19.825738338969632
+        }
+      ]
+    },
+    {
+      "region": "Axon",
+      "xyz_um": [
+        17.887227976905933,
+        -546.2868849071733,
+        31.96872770851577
+      ],
+      "saved_surface_clearance_um": 19.990738501126305,
+      "target_compartment": 1657,
+      "nearest_compartment": 1657,
+      "full_recording": {
+        "peak_abs_uV": 12.551167604668008,
+        "peak_signed_uV": -12.551167604668008,
+        "peak_time_ms": 299.9,
+        "peak_to_peak_uV": 17.550214649472387
+      },
+      "displayed_interval": {
+        "peak_abs_uV": 12.551167604668008,
+        "peak_signed_uV": -12.551167604668008,
+        "peak_time_ms": 299.9,
+        "peak_to_peak_uV": 17.550214649472387
+      },
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV": 6.122817616092126,
+          "peak_signed_uV": -6.122817616092126,
+          "peak_time_ms": 289.8,
+          "peak_to_peak_uV": 9.642733559822606
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV": 12.551167604668008,
+          "peak_signed_uV": -12.551167604668008,
+          "peak_time_ms": 299.9,
+          "peak_to_peak_uV": 17.550214649472387
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The saved NPZ was audited without rerunning NEURON.",
+    "Saved clearances are metadata from the placement routine; independent morphology reconstruction remains pending.",
+    "Whole-recording peaks for apical and basal probes occur near 375.9 ms, outside the two somatic spike windows.",
+    "Extracellular traces include stimulus-correlated components and are not baseline-corrected."
+  ]
+}
