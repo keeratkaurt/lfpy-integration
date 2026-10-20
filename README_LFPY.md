@@ -227,3 +227,9 @@ and conductivity assumptions; see [PUBLIC_DATA_COMPARISON.md](PUBLIC_DATA_COMPAR
 For the presentation, report whole-recording peaks as "peak absolute extracellular
 voltage over 100–500 ms." The apical and basal whole-recording maxima occur around
 375.9 ms, outside the two detected somatic spike windows.
+
+
+The pushed 50 µm run is a placement-sensitivity comparison against the original
+20 µm run. Because the current placement routine selects different nearby
+compartments at different offsets, this comparison is not a controlled
+distance-only experiment. The report records this limitation explicitly.
