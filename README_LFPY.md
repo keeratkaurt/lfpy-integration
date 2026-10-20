@@ -202,3 +202,28 @@ Pending:
 
 - integration into the large-scale HDF5 generation pipeline
 - NERSC/Perlmutter validation and scaling
+
+
+## Talent Showcase analysis
+
+The presentation work is maintained on the `talent-showcase` branch. The short
+technical report is in [SHOWCASE_REPORT.md](SHOWCASE_REPORT.md). The saved-data
+verification is in [verify_site_recordings.py](verify_site_recordings.py), with
+its checked values in
+[results_site_recordings/verification_metrics.json](results_site_recordings/verification_metrics.json).
+
+Additional analyses are in `analysis/`:
+
+- `electrode_position_heatmap.py` creates a labeled electrode-position amplitude map.
+- `noise_spike_analysis.py` detects somatic upward zero crossings and estimates baseline variability and model SNR.
+- `robustness_comparison.py` compares amplitudes across independently generated electrode-offset runs.
+
+The heatmap and noise analysis operate on the saved NPZ without rerunning NEURON.
+The robustness analysis requires at least two additional offset runs. The public-data
+comparison was assessed as infeasible for the deadline because an unmatched
+experimental dataset would not share the simulation's geometry, units, referencing,
+and conductivity assumptions; see [PUBLIC_DATA_COMPARISON.md](PUBLIC_DATA_COMPARISON.md).
+
+For the presentation, report whole-recording peaks as "peak absolute extracellular
+voltage over 100–500 ms." The apical and basal whole-recording maxima occur around
+375.9 ms, outside the two detected somatic spike windows.
