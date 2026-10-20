@@ -106,3 +106,22 @@ python analysis/robustness_comparison.py \
 The robustness script requires at least two independently generated electrode
 offset runs. It should not be interpreted as complete until those additional
 runs exist.
+
+
+## Noise and placement-sensitivity analysis
+
+Using 100–280 ms as a pre-spike baseline, the baseline RMS values were 1.72 µV
+(perisomatic), 0.22 µV (apical), 0.86 µV (basal), and 0.25 µV (axonal). Within
+±2/+3 ms spike windows, the largest baseline-corrected peak-to-baseline-RMS
+ratios were approximately 51.1, 11.9, 13.7, and 50.4, respectively. These are
+simulation signal-to-baseline ratios, not hardware SNR, because no measurement
+noise was added.
+
+A second run with the placement offset increased from 20 to 50 µm produced
+whole-recording peak amplitudes of 16.63 µV (soma), 2.77 µV (apical), 8.08 µV
+(basal), and 4.42 µV (axon), compared with 87.58, 2.77, 12.39, and 12.55 µV at
+20 µm. This demonstrates sensitivity to probe placement, but it is not a pure
+distance-response experiment: the placement routine selected different target
+compartments and coordinates in the 50 µm run. The comparison therefore supports
+placement sensitivity as a robustness observation, not a causal estimate of
+amplitude versus distance.
