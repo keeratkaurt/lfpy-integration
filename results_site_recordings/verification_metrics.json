@@ -1,5 +1,6 @@
 {
   "input": "results_site_recordings/site_recordings.npz",
+  "input_sha256": "2b7216f3d00489bc0ee426d9f8fa68762596e73d74b99f5ecc6aa46f9df4c7a8",
   "soma_zero_crossings_ms": [
     289.044492993273,
     298.2265456113499
@@ -11,43 +12,55 @@
   "dt_ms": 0.1,
   "sigma_S_per_m": 0.3,
   "unshifted_command_error_nA": 1.1824158307440684,
-  "one_sample_lag_command_error_nA": 0,
+  "one_sample_lag_command_error_nA": 0.0,
   "electrodes": [
     {
       "region": "Soma",
       "xyz_um": [
-        0,
-        0,
+        0.0,
+        0.0,
         37.07013961248617
       ],
       "saved_surface_clearance_um": 20.865527270355415,
       "target_compartment": 0,
       "nearest_compartment": 2323,
       "full_recording": {
+        "window_start_ms": 0.0,
+        "window_end_ms": 500.0000000000452,
+        "samples": 5001,
         "peak_abs_uV": 87.58428154416013,
         "peak_signed_uV": -87.58428154416013,
-        "peak_time_ms": 298.3,
-        "peak_to_peak_uV": 121.86324375497826
+        "peak_time_ms": 298.29999999999933,
+        "peak_to_peak_uV": 121.86324375497827
       },
       "displayed_interval": {
+        "window_start_ms": 100.0,
+        "window_end_ms": 500.0,
+        "samples": 4001,
         "peak_abs_uV": 87.58428154416013,
         "peak_signed_uV": -87.58428154416013,
-        "peak_time_ms": 298.3,
-        "peak_to_peak_uV": 121.86324375497826
+        "peak_time_ms": 298.29999999999933,
+        "peak_to_peak_uV": 121.86324375497827
       },
       "spike_windows": [
         {
           "soma_crossing_ms": 289.044492993273,
+          "window_start_ms": 287.044492993273,
+          "window_end_ms": 292.044492993273,
+          "samples": 50,
           "peak_abs_uV": 84.95107590910422,
           "peak_signed_uV": -84.95107590910422,
-          "peak_time_ms": 289.2,
+          "peak_time_ms": 289.19999999999726,
           "peak_to_peak_uV": 109.32834786242178
         },
         {
           "soma_crossing_ms": 298.2265456113499,
+          "window_start_ms": 296.2265456113499,
+          "window_end_ms": 301.2265456113499,
+          "samples": 50,
           "peak_abs_uV": 87.58428154416013,
           "peak_signed_uV": -87.58428154416013,
-          "peak_time_ms": 298.3,
+          "peak_time_ms": 298.29999999999933,
           "peak_to_peak_uV": 113.8788756770813
         }
       ]
@@ -63,30 +76,42 @@
       "target_compartment": 3033,
       "nearest_compartment": 2974,
       "full_recording": {
+        "window_start_ms": 0.0,
+        "window_end_ms": 500.0000000000452,
+        "samples": 5001,
         "peak_abs_uV": 2.772704670370247,
         "peak_signed_uV": 2.772704670370247,
-        "peak_time_ms": 375.9,
+        "peak_time_ms": 375.900000000017,
         "peak_to_peak_uV": 3.532137465000616
       },
       "displayed_interval": {
+        "window_start_ms": 100.0,
+        "window_end_ms": 500.0,
+        "samples": 4001,
         "peak_abs_uV": 2.772704670370247,
         "peak_signed_uV": 2.772704670370247,
-        "peak_time_ms": 375.9,
+        "peak_time_ms": 375.900000000017,
         "peak_to_peak_uV": 3.532137465000616
       },
       "spike_windows": [
         {
           "soma_crossing_ms": 289.044492993273,
+          "window_start_ms": 287.044492993273,
+          "window_end_ms": 292.044492993273,
+          "samples": 50,
           "peak_abs_uV": 2.0677191163279205,
           "peak_signed_uV": 2.0677191163279205,
-          "peak_time_ms": 288.5,
+          "peak_time_ms": 288.4999999999971,
           "peak_to_peak_uV": 2.1393513284168804
         },
         {
           "soma_crossing_ms": 298.2265456113499,
+          "window_start_ms": 296.2265456113499,
+          "window_end_ms": 301.2265456113499,
+          "samples": 50,
           "peak_abs_uV": 2.6392793475334098,
           "peak_signed_uV": 2.6392793475334098,
-          "peak_time_ms": 297.6,
+          "peak_time_ms": 297.59999999999917,
           "peak_to_peak_uV": 3.025584763069427
         }
       ]
@@ -102,31 +127,43 @@
       "target_compartment": 2286,
       "nearest_compartment": 2285,
       "full_recording": {
+        "window_start_ms": 0.0,
+        "window_end_ms": 500.0000000000452,
+        "samples": 5001,
         "peak_abs_uV": 12.391536225441897,
         "peak_signed_uV": 12.391536225441897,
-        "peak_time_ms": 375.9,
-        "peak_to_peak_uV": 20.176194608748386
+        "peak_time_ms": 375.900000000017,
+        "peak_to_peak_uV": 20.17619460874839
       },
       "displayed_interval": {
+        "window_start_ms": 100.0,
+        "window_end_ms": 500.0,
+        "samples": 4001,
         "peak_abs_uV": 12.391536225441897,
         "peak_signed_uV": 12.391536225441897,
-        "peak_time_ms": 375.9,
-        "peak_to_peak_uV": 20.176194608748386
+        "peak_time_ms": 375.900000000017,
+        "peak_to_peak_uV": 20.17619460874839
       },
       "spike_windows": [
         {
           "soma_crossing_ms": 289.044492993273,
+          "window_start_ms": 287.044492993273,
+          "window_end_ms": 292.044492993273,
+          "samples": 50,
           "peak_abs_uV": 8.778268511132145,
           "peak_signed_uV": 8.778268511132145,
-          "peak_time_ms": 288.5,
+          "peak_time_ms": 288.4999999999971,
           "peak_to_peak_uV": 14.902725667727818
         },
         {
           "soma_crossing_ms": 298.2265456113499,
+          "window_start_ms": 296.2265456113499,
+          "window_end_ms": 301.2265456113499,
+          "samples": 50,
           "peak_abs_uV": 12.041079955663141,
           "peak_signed_uV": 12.041079955663141,
-          "peak_time_ms": 297.7,
-          "peak_to_peak_uV": 19.825738338969632
+          "peak_time_ms": 297.6999999999992,
+          "peak_to_peak_uV": 19.825738338969636
         }
       ]
     },
@@ -141,39 +178,51 @@
       "target_compartment": 1657,
       "nearest_compartment": 1657,
       "full_recording": {
+        "window_start_ms": 0.0,
+        "window_end_ms": 500.0000000000452,
+        "samples": 5001,
         "peak_abs_uV": 12.551167604668008,
         "peak_signed_uV": -12.551167604668008,
-        "peak_time_ms": 299.9,
+        "peak_time_ms": 299.8999999999997,
         "peak_to_peak_uV": 17.550214649472387
       },
       "displayed_interval": {
+        "window_start_ms": 100.0,
+        "window_end_ms": 500.0,
+        "samples": 4001,
         "peak_abs_uV": 12.551167604668008,
         "peak_signed_uV": -12.551167604668008,
-        "peak_time_ms": 299.9,
+        "peak_time_ms": 299.8999999999997,
         "peak_to_peak_uV": 17.550214649472387
       },
       "spike_windows": [
         {
           "soma_crossing_ms": 289.044492993273,
+          "window_start_ms": 287.044492993273,
+          "window_end_ms": 292.044492993273,
+          "samples": 50,
           "peak_abs_uV": 6.122817616092126,
           "peak_signed_uV": -6.122817616092126,
-          "peak_time_ms": 289.8,
+          "peak_time_ms": 289.7999999999974,
           "peak_to_peak_uV": 9.642733559822606
         },
         {
           "soma_crossing_ms": 298.2265456113499,
+          "window_start_ms": 296.2265456113499,
+          "window_end_ms": 301.2265456113499,
+          "samples": 50,
           "peak_abs_uV": 12.551167604668008,
           "peak_signed_uV": -12.551167604668008,
-          "peak_time_ms": 299.9,
+          "peak_time_ms": 299.8999999999997,
           "peak_to_peak_uV": 17.550214649472387
         }
       ]
     }
   ],
   "limitations": [
-    "The saved NPZ was audited without rerunning NEURON.",
-    "Saved clearances are metadata from the placement routine; independent morphology reconstruction remains pending.",
-    "Whole-recording peaks for apical and basal probes occur near 375.9 ms, outside the two somatic spike windows.",
-    "Extracellular traces include stimulus-correlated components and are not baseline-corrected."
+    "Spike windows are -2 to +3 ms around interpolated somatic upward zero crossings; raw window amplitudes are not baseline corrected and do not isolate spike currents.",
+    "Saved clearances are positive, but morphology was not rebuilt. This does not independently verify the saved geometry.",
+    "The NPZ does not record clamp count or clamp compartment; soma-only stimulation is supported by source-code inspection.",
+    "No re-simulation, saved-figure pixel comparison, or noise analysis."
   ]
 }

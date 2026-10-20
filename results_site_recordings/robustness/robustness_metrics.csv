@@ -1,0 +1,9 @@
+offset_um,source,region,peak_abs_uV_100_500ms,peak_time_ms
+20.0,results_site_recordings/site_recordings.npz,Soma,87.58428154416013,298.29999999999933
+20.0,results_site_recordings/site_recordings.npz,Apical dendrite,2.772704670370247,375.900000000017
+20.0,results_site_recordings/site_recordings.npz,Basal dendrite,12.391536225441897,375.900000000017
+20.0,results_site_recordings/site_recordings.npz,Axon,12.551167604668008,299.8999999999997
+50.0,results_offset_50/site_recordings.npz,Soma,16.62741114927277,298.39999999999935
+50.0,results_offset_50/site_recordings.npz,Apical dendrite,2.7700271773618867,375.900000000017
+50.0,results_offset_50/site_recordings.npz,Basal dendrite,8.079400882780241,375.900000000017
+50.0,results_offset_50/site_recordings.npz,Axon,4.417241088317752,299.9999999999997

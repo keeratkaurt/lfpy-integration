@@ -1,0 +1,116 @@
+{
+  "input": "results_site_recordings/site_recordings.npz",
+  "baseline_definition": "100-280 ms, before the first detected somatic upward zero crossing",
+  "spike_detection": "somatic membrane voltage upward zero crossing through 0 mV",
+  "detected_somatic_crossings_ms": [
+    289.044492993273,
+    298.2265456113499
+  ],
+  "electrodes": [
+    {
+      "region": "Soma",
+      "baseline_window_ms": [
+        100.0,
+        280.0
+      ],
+      "baseline_mean_uV": 0.28344966133882976,
+      "baseline_sd_uV": 1.718566018114302,
+      "baseline_rms_uV": 1.7180885723437007,
+      "all_recording_peak_abs_uV": 87.58428154416013,
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV_baseline_corrected": 85.23452557044305,
+          "peak_to_peak_uV": 109.32834786242178,
+          "snr_peak_over_baseline_rms": 49.610088177335264
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV_baseline_corrected": 87.86773120549897,
+          "peak_to_peak_uV": 113.8788756770813,
+          "snr_peak_over_baseline_rms": 51.142724897841404
+        }
+      ]
+    },
+    {
+      "region": "Apical dendrite",
+      "baseline_window_ms": [
+        100.0,
+        280.0
+      ],
+      "baseline_mean_uV": 0.020216788450246447,
+      "baseline_sd_uV": 0.21948088104561808,
+      "baseline_rms_uV": 0.219419905664237,
+      "all_recording_peak_abs_uV": 2.772704670370247,
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV_baseline_corrected": 2.047502327877674,
+          "peak_to_peak_uV": 2.1393513284168804,
+          "snr_peak_over_baseline_rms": 9.331433817179851
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV_baseline_corrected": 2.6190625590831633,
+          "peak_to_peak_uV": 3.025584763069427,
+          "snr_peak_over_baseline_rms": 11.93630336844157
+        }
+      ]
+    },
+    {
+      "region": "Basal dendrite",
+      "baseline_window_ms": [
+        100.0,
+        280.0
+      ],
+      "baseline_mean_uV": 0.21612113314973005,
+      "baseline_sd_uV": 0.8633347089726771,
+      "baseline_rms_uV": 0.8630948604588187,
+      "all_recording_peak_abs_uV": 12.391536225441897,
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV_baseline_corrected": 8.562147377982415,
+          "peak_to_peak_uV": 14.902725667727816,
+          "snr_peak_over_baseline_rms": 9.9202854405028
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV_baseline_corrected": 11.82495882251341,
+          "peak_to_peak_uV": 19.825738338969636,
+          "snr_peak_over_baseline_rms": 13.700647940629953
+        }
+      ]
+    },
+    {
+      "region": "Axon",
+      "baseline_window_ms": [
+        100.0,
+        280.0
+      ],
+      "baseline_mean_uV": 0.08310285627155782,
+      "baseline_sd_uV": 0.2509038316048446,
+      "baseline_rms_uV": 0.2508341264134439,
+      "all_recording_peak_abs_uV": 12.551167604668008,
+      "spike_windows": [
+        {
+          "soma_crossing_ms": 289.044492993273,
+          "peak_abs_uV_baseline_corrected": 6.205920472363684,
+          "peak_to_peak_uV": 9.642733559822606,
+          "snr_peak_over_baseline_rms": 24.741132959454703
+        },
+        {
+          "soma_crossing_ms": 298.2265456113499,
+          "peak_abs_uV_baseline_corrected": 12.634270460939565,
+          "peak_to_peak_uV": 17.550214649472387,
+          "snr_peak_over_baseline_rms": 50.369025306049465
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The baseline window is a quiet pre-spike interval in this single simulation, not an empirical recording noise floor.",
+    "The simulation has no added stochastic measurement noise.",
+    "SNR is therefore a model-signal-to-simulation-variability ratio, not hardware SNR."
+  ]
+}
